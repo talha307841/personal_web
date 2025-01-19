@@ -1,26 +1,51 @@
-import Link from 'next/link';
+import Head from 'next/head';
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <main className="container mx-auto p-6 text-center">
-      <h2 className="text-3xl font-bold mb-4">Welcome to My Personal Website</h2>
-      <p className="text-lg">
-        Hi! I’m <strong>Talha Yousaf</strong>, a Results-oriented Software Engineer with 
-        <strong>3 years of experience</strong> in backend development, AI integration, 
-        and building scalable applications.
-      </p>
-      <div className="mt-6">
-        <Link href="/cv">
-          <a className="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-700">
-            View My CV
-          </a>
-        </Link>
-        <Link href="/contact">
-          <a className="ml-4 bg-green-500 text-white px-6 py-3 rounded hover:bg-green-700">
-            Contact Me
-          </a>
-        </Link>
-      </div>
-    </main>
+    <div className="min-h-screen bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+      <Head>
+        <title>Talha Yousaf - Software Engineer</title>
+      </Head>
+
+      <header className="bg-gray-900 bg-opacity-75 p-6">
+        <h1 className="text-4xl font-extrabold text-center">Talha Yousaf</h1>
+        <p className="text-center text-lg mt-2">Software Engineer | AI Enthusiast | Backend Specialist</p>
+      </header>
+
+      <main className="container mx-auto p-8 text-center">
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-4">About Me</h2>
+          <p className="text-lg leading-relaxed">
+            Results-oriented Software Engineer with 3 years of experience in backend development, AI integration, and building scalable applications. Proficient in Python, Django, FastAPI, and Flask, with a strong focus on creating efficient and maintainable solutions. Skilled in developing and deploying generative AI models, including GANs, for innovative projects. Passionate about solving complex problems and contributing to impactful, data-driven software solutions.
+          </p>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
+          <p className="text-lg">
+            Email: <a href="mailto:muhammadtalhayousaf3@gmail.com" className="text-blue-300 underline">muhammadtalhayousaf3@gmail.com</a>
+          </p>
+          <p className="text-lg mt-2">
+            Phone: <a href="tel:+923462468393" className="text-blue-300 underline">+92 346 2468393</a>
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-3xl font-bold mb-4">My Skills</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="p-4 bg-gray-900 rounded shadow-md">Python</div>
+            <div className="p-4 bg-gray-900 rounded shadow-md">Django</div>
+            <div className="p-4 bg-gray-900 rounded shadow-md">FastAPI</div>
+            <div className="p-4 bg-gray-900 rounded shadow-md">Flask</div>
+            <div className="p-4 bg-gray-900 rounded shadow-md">AI Integration</div>
+            <div className="p-4 bg-gray-900 rounded shadow-md">Generative AI</div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="bg-gray-900 bg-opacity-75 p-4 text-center mt-16">
+        <p className="text-sm">&copy; 2025 Talha Yousaf. All rights reserved.</p>
+      </footer>
+    </div>
   );
 }
